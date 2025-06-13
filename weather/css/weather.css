@@ -1,0 +1,78 @@
+.weather-section {
+    background-color: #f8f9fa;
+    margin: 2rem 0;
+}
+
+#weatherWidget {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.weather-container {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-loading {
+    text-align: center;
+    color: #6c757d;
+}
+
+.weather-loading i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fa-spin 2s infinite linear;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.weather-temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.weather-desc {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.weather-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-detail i {
+    margin-bottom: 0.5rem;
+}
