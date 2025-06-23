@@ -1,21 +1,42 @@
-import React from 'react';
-import StudentTable from './StudentTable';
-
-const App = () => {
-  const students = [
-    { name: 'Student 1', marks: [80, 75, 90] },
-    { name: 'Student 2', marks: [60, 65, 70] },
-    { name: 'Student 3', marks: [85, 95, 80] },
-    { name: 'Student 4', marks: [70, 60, 65] },
-    { name: 'Student 5', marks: [90, 88, 92] },
-  ];
-
+//import './App.css';
+import Login from './Login';
+import UserList from './UserList';
+import React  from 'react';
+import Dynamic from './Dynamic';
+import StudentMarks from './StudentMarks';
+//import Home from './Home';
+import Navbar from './Navbar';
+//import Aboutus from './Aboutus';
+//import Contactus from './Contactus';
+import { Route, Routes } from 'react-router-dom';
+import Contactus from './components/routespath/Contactus';
+import Aboutus from './components/routespath/Aboutus';
+import Home from './components/routespath/Home';
+/*function App() {
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Student Marks Summary</h1>
-      <StudentTable students={students} />
+    <div>
+      <h1>Form Handling</h1>
+       <Dynamic />  
+      <Login />
+      <UserList />
+      <StudentMarks/>
     </div>
   );
-};
+}
+export default App;*/
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Learning React Routers</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/contactus" element={<Contactus />} />
+      </Routes>
+    </div>
+  )
+}
 
 export default App;
